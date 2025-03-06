@@ -1,0 +1,121 @@
+<!-- Write javascript functions to create new html elements such as<li>,<button> or <input> dynamically. demonstrate how to 
+append these elements to existing parent elements in dom tree.implement functionally to update the content or attributes
+of dynamically created elements based on user input or events.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: 20px; padding: 10px; border: 1px solid black;
+         }        
+        ul {
+            list-style-type: disc; display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Dynamic Element Manipulation</h1>
+    </div>
+    <script>
+        // Create a new list item element
+        function createListItem(parentId, textContent) {
+            const li = document.createElement('li'); // Fixed the error here
+            li.textContent = textContent;
+            const parent = document.getElementById(parentId);
+            if(parent) {
+                parent.appendChild(li);
+            } else {
+                console.error("Parent element not found");
+            }
+        }
+
+        // Create a new button element
+        function createButton(parentId, buttonText, onClickFunction) {
+            const button = document.createElement('button');
+            button.textContent = buttonText;
+            button.addEventListener('click', onClickFunction);
+            const parent = document.getElementById(parentId);
+            if(parent) {
+                parent.appendChild(button);
+            } else {
+                console.error("Parent element not found");
+            }
+        }
+
+        // Create a new input element
+        function createInput(parentId, placeholderText, onChangeFunction) {
+            const input = document.createElement('input');
+            input.placeholder = placeholderText;
+            input.addEventListener('input', (event) => onChangeFunction(event.target.value));
+            const parent = document.getElementById(parentId);
+            if(parent) {
+                parent.appendChild(input);
+            } else {
+                console.error("Parent element not found");
+            }
+        }
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const parentId = 'container';
+            
+            // Create an unordered list in the container
+            const ul = document.createElement('ul');
+            ul.id = 'dynamicList';
+            document.getElementById(parentId).appendChild(ul);
+
+            // Create initial dynamic elements
+            createListItem('dynamicList', 'Mithil 2310997173');
+            createButton(parentId, 'Click ME', () => alert('Button clicked!'));
+            createInput(parentId, 'Type something....', (value) => console.log('Input changed: ', value));
+
+            // Add functionality to dynamically create a new list item on button click
+            createButton(parentId, 'Add List Item', () => {
+                const newItemText = prompt("Enter new list item text: ");
+                if (newItemText) {
+                    createListItem('dynamicList', newItemText);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Eat</li>
+        </ul>
+    </div>
+    <script>
+        let li = document.createElement("li");
+        let ul = document.querySelector("ul");
+        li.innerText = "Sleep";
+        ul.appendChild(li);
+        console.log("Appended li...");
+
+        let input = document.createElement("input");
+        input.placeholder = "Enter your name ";
+        ul.insertAdjacentElement("beforebegin",input);
+        console.log("input inserted before ul tag");
+
+
+        let btn = document.createElement("button");
+        btn.innerText = "Click me"
+        ul.insertAdjacentElement("afterend",btn);
+
+
+    </script>
+</body>
+</html> -->
