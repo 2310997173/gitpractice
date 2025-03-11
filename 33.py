@@ -1,4 +1,4 @@
-# cho experiments
+# cho experiments(done on date:11feb.2025)
 # 15
 # student = ["a","b","c","d","e","f","g","h","i","j","k","l"]
 # SV = int(input("enter the start value: "))
