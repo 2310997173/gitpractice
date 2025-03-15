@@ -1,5 +1,5 @@
 console.log("My self Mr. Nobody!!")
 console.log("I belong to no one,No one means no one")
-console.log("I am born to be alone nd i want to be alone,to safe my peace")
-console.log("I aint give shit!!,cz no give a shit")
-console.log("Who cares!?")
+console.log("I am born to be alone nd i want to be alone,to be in my peace")
+console.log("I aint give shit!!")
+console.log("Who cares!?,Ofc I don,t")
