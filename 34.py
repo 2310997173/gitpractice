@@ -4,5 +4,9 @@ carinfgo = {
     "color" : ["white","red","orange"]
 }
 
-carinfgo ["year"] = 2025
+carinfgo.pop("brand")
+carinfgo.popitem()
+del carinfgo["color"]
+del carinfgo
+carinfgo.clear()
 print(carinfgo)
