@@ -46,7 +46,7 @@ carinfgo = {
 # print(myfamily["child2"]["Name"])
 
 # 
-student1={ }
+student1={}
 for _ in range(4):
     roll_no = input("Enter the roll no: ")
     student1[roll_no] = {
