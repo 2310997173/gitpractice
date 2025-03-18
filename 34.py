@@ -46,9 +46,9 @@ carinfgo = {
 # print(myfamily["child2"]["Name"])
 
 # 
-student1={}
-for _ in range(10):
-    roll_no = input["Enter the roll no: "]
+student1={ }
+for _ in range(4):
+    roll_no = input("Enter the roll no: ")
     student1[roll_no] = {
         "Name" : input("Enter the name: "),
         "Age" : input("Enter the age: "),
@@ -56,6 +56,7 @@ for _ in range(10):
         "Block" : input("Enter your block name: ")
     }
     print("Student data is added")
+
 Search_roll_no = input("Enter the roll no you want to search: ")
 if Search_roll_no in student1:
     print("Student Details")
