@@ -4,9 +4,14 @@ carinfgo = {
     "color" : ["white","red","orange"]
 }
 
-carinfgo.pop("brand")
+# carinfgo.pop("brand")
 # carinfgo.popitem()
 # del carinfgo["color"]
 # del carinfgo
 # carinfgo.clear()
-print(carinfgo)
+# print(carinfgo)
+
+car = carinfgo.copy()
+car1 = dict(carinfgo)
+print(car)
+print(car1)
