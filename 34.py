@@ -46,3 +46,6 @@ myfamily = {
 print(myfamily["child2"]["Name"])
 
 # 
+student1={}
+for _ in range(10):
+    roll_no = input["Enter the roll no: "]
