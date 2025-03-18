@@ -29,21 +29,21 @@ carinfgo = {
 #     print(x,y)
 
 # nested dictinory 
-myfamily = {
-    "child1" : {
-        "Name" : "Ram",
-        "Age" : 20
-    },
-    "child2" : {
-        "Name" : "Lucky",
-        "Age" : 25
-    },
-    "child3" : {
-        "Name" : "Ash",
-        "Age" : 18
-    },
-}
-print(myfamily["child2"]["Name"])
+# myfamily = {
+#     "child1" : {
+#         "Name" : "Ram",
+#         "Age" : 20
+#     },
+#     "child2" : {
+#         "Name" : "Lucky",
+#         "Age" : 25
+#     },
+#     "child3" : {
+#         "Name" : "Ash",
+#         "Age" : 18
+#     },
+# }
+# print(myfamily["child2"]["Name"])
 
 # 
 student1={}
