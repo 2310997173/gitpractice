@@ -47,7 +47,7 @@ carinfgo = {
 
 # 
 student1={}
-for _ in range(4):
+for _ in range(6):
     roll_no = input("Enter the roll no: ")
     student1[roll_no] = {
         "Name" : input("Enter the name: "),
