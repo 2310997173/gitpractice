@@ -55,3 +55,5 @@ fact_list = [math.factorial(x) for x in raw_list]
 print(raw_list)
 print(sq_list)
 print(fact_list)
+
+# ended here!
