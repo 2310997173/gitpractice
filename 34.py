@@ -55,7 +55,7 @@ for _ in range(6):
         "Course" : input("Enter your course: "),
         "Block" : input("Enter your block name: ")
     }
-    print("Student data is added")
+    print("Student data is added!")
 
 Search_roll_no = input("Enter the roll no you want to search: ")
 if Search_roll_no in student1:
