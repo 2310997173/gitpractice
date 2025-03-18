@@ -5,8 +5,8 @@ carinfgo = {
 }
 
 carinfgo.pop("brand")
-carinfgo.popitem()
-del carinfgo["color"]
-del carinfgo
-carinfgo.clear()
+# carinfgo.popitem()
+# del carinfgo["color"]
+# del carinfgo
+# carinfgo.clear()
 print(carinfgo)
