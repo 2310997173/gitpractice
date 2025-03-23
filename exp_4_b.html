@@ -1,0 +1,72 @@
+<!--Write javascript code to select and modify specific elements using document.querySelector(),
+and other DOM manipulation methods.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Methods</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        ul{
+            padding: 0;
+            list-style-type: none;
+        }
+        li{
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">Simple Heading Text</h1>
+    <p class="description">This is a normal paragrapgh tag of html</p>
+    <ul>
+        <li>Rohit sharma</li>
+        <li>Virat Kholi</li>
+        <li>Javascript</li>
+    </ul>
+    <button onclick="action()">Click Me!</button>
+    <script>
+        function action(){
+            // Using document.getElementByid()
+            const heading = document.getElementById("main-heading");
+            if(heading){
+                heading.textContent = "Heading Updated by JS";
+                heading.style.color = "blue";
+                heading.style.fontsize = "2em";
+            }
+            //Using document.querySelector()
+            const firstParagrapgh = document.querySelector(".description")
+            if(firstParagrapgh){
+                firstParagrapgh.textContent = "Now, the paragrapgh is updated by JS"
+                firstParagrapgh.style.backgroundColor = "#f0f8ff";
+            }
+            //Using document.querySelectorAll()to select mutltiple
+            const listItems = document.querySelectorAll("ul li");
+            listItems.forEach((item, index) => {
+                item.textContent = `Player ${index +1}`;
+                item.style.fontweight = "bold";
+            });
+            //Using document.createElement() to create a new element
+            const newDiv = document.createElement("div");
+            newDiv.textContent = "This is a new dynamically created div"
+            newDiv.style.padding = "10px";
+            newDiv.style.border = "10px solid #CCC"; 
+            // Appending the new div to the body
+            const body = document.body;
+            body.appendChild(newDiv);
+            //Adding an event listener to an element
+            const button = document.querySelection("button");
+            if(button){
+                button.addEventListener("Click",() =>{
+                    alert("Button was clicked!");
+                });
+            }
+        }
+    </script>
+</body>
+</html>

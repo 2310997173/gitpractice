@@ -1,0 +1,20 @@
+// console.log("Mithil");
+// console.log("2310997173");
+// let fruits = ["Mango", "Avocado", "Pineapple", "Blackberry", "Grapes"];
+// console.log("Original List: ", fruits);
+// fruits.push("Watermelon");
+// console.log("Updation after PUSH");
+// console.log(fruits);
+// console.log("Array size after update:", fruits.length);
+
+console.log("Mithil");
+console.log("2310997173");
+let fruits = ["Mango", "Avocado", "Pineapple", "Blackberry", "Grapes"];
+console.log("Original List: ", fruits);
+fruits.push("Watermelon");
+console.log("List after PUSH: ",fruits);
+fruits.pop();
+console.log("Updation after POP: ");
+console.log(fruits);
+console.log("Updation after slice: ");
+console.log(fruits.slice(2,4));

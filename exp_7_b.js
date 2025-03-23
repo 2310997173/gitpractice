@@ -1,0 +1,1 @@
+// Design and utilize template literals to dynamically generate content within a react component

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+<form id="registrationForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="rollno">Roll Number:</label><br>
+    <input type="text" id="rollno" name="rollno" required><br><br>
+
+    <label for="class">Class:</label><br>
+    <input type="text" id="class" name="class" required><br><br>
+
+    <label for="semester">Semester:</label><br>
+    <input type="text" id="semester" name="semester" required><br><br>
+
+    <label for="email">Email ID:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <span class="error" id="emailError"></span><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="text" id="phone" name="phone" required><br>
+    <span class="error" id="phoneError"></span><br><br>
+
+    <input type="submit" value="Register">
+</form>
+
+<script>
+    let registeredEmail = ''; // Variable to store the registered email
+
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Clear previous error messages
+        document.getElementById('phoneError').textContent = '';
+        document.getElementById('emailError').textContent = '';
+
+        // Validate email
+        const email = document.getElementById('email').value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation pattern
+
+        if (!emailPattern.test(email)) {
+            document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+            return; // Stop form submission
+        }
+
+        // Check if the email is already registered
+        if (registeredEmail && registeredEmail !== email) {
+            document.getElementById('emailError').textContent = 'This email is already registered. Please use a different email.';
+            return; // Stop form submission
+        }
+
+        // If validation passes, store the email and show success message
+        registeredEmail = email; // Store the registered email
+        alert('Registration successful!');
+
+        // Here you can add code to send the data to a server or process it as needed
+    });
+</script>
+
+</body>
+</html>
