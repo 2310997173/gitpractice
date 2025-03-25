@@ -17,8 +17,8 @@
 
 # print(c)
 
-def name(*kids):
-    print("The child name is: ",kids[child2])
+def name(**kids):
+    print("The child name is: ",kids["child2"])
 c = name(child1 = "Ram",
          child2 = "Sham"
         )
