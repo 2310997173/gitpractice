@@ -2,9 +2,9 @@ import { useState } from "react";
 
 export default function App() {
   const [formData, setFormData] = useState ({
-    name: "",
+    n`ame: "",
     rollno: ""
-  });
+  });`
 
   const handleChange = (e) => {
     const {name,value} = e.target;
