@@ -14,7 +14,7 @@
     <script>
         document.getElementById('fetchButton').addEventListener('click',function(){
             const xmlreq = new XMLHttpRequest();
-            const url = 'https://jsonplaceholder.typicode.com/posts/1';
+            const url = 'https://jsonplaceholder.typicode.com/posts/10';
             document.getElementById('data').innerText = 'Loading....';
             xmlreq.open('GET', url , true);
             xmlreq.onload = function() {  
