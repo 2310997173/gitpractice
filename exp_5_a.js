@@ -12,7 +12,7 @@ function simulate(callback,delay){
     },delay);
 }
 simulate(() => {
-    console.log('Manan 2310997163');
+    console.log('Mthil 2310997173');
 },4000);
 
 // setTimeout(()=>{
