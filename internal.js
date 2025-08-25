@@ -4,7 +4,7 @@ const employee = {
     name: "Mithil gupta",
     department: "BCA",
     salary: 75000,
-    email: "mithil.g@gmail.com"
+    email: "mithil@gmail.com"
 };
 
 // Displaying the employee object in the console
